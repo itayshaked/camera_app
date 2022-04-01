@@ -21,10 +21,10 @@ except OSError as error:
     pass
 
 #Load pretrained face detection model    
-net = cv2.dnn.readNetFromCaffe('./saved_model/deploy.prototxt.txt', './saved_model/res10_300x300_ssd_iter_140000.caffemodel')
+net = cv2.dnn.readNetFromCaffe('./deploy.prototxt.txt', './res10_300x300_ssd_iter_140000.caffemodel')
 
 #instatiate flask app  
-app = Flask(__name__, template_folder='./templates')
+app = Flask(__name__, template_folder='./')
 
 
 camera = cv2.VideoCapture(0)

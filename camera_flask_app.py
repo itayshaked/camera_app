@@ -14,6 +14,7 @@ face=0
 switch=1
 rec=0
 
+
 #make shots directory to save pics
 try:
     os.mkdir('./shots')

@@ -14,6 +14,7 @@ face=0
 switch=1
 rec=0
 
+
 #make shots directory to save pics
 try:
     os.mkdir('./shots')
@@ -99,8 +100,8 @@ def gen_frames():  # generate frame by frame from camera
 @app.route('/')
 def index():
     return render_template('index.html')
-    
-    
+
+
 @app.route('/video_feed')
 def video_feed():
     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
